@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import ProductList from './components/ProductList'
 import Footer from './components/Footer'
+import About from './Components/About/About'
 
 function App() {
   // 1. GLOBAL STATE: Managing the "Memory" of the app
@@ -32,6 +33,8 @@ function App() {
 
       {/* Dev D builds the footer here */}
       <Footer />
+      <About/>
+      
     </div>
   )
 }

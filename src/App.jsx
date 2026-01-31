@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import Header from './components/Header'
-import ProductList from './components/ProductList'
-import Footer from './components/Footer'
+import Header from './Components/Header';
+import ProductList from './Components/ProductList'
+import Footer from './Components/Footer/Footer'
 import About from './Components/About/About'
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
       <Header cartCount={cart.length} />
 
       {/* Dev C gets the perfume list and the 'Add' function */}
-      <ProductList perfumes={products} onAdd={addToCart} />
+      <ProductList products={products} addToCart={addToCart} />
 
       {/* Dev D builds the footer here */}
       <Footer />

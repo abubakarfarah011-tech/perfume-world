@@ -5,70 +5,70 @@
       "name": "Men's Classic Cologne",
       "price": 50,
       "category": "men",
-      "image": "https://via.placeholder.com/150?text=Mens+Classic"
+      "image": "https://images.unsplash.com/photo-1588405748880-12d1d2a59db9?w=300&h=300&fit=crop"
     },
     {
       "id": 2,
       "name": "Men's Sporty Scent",
       "price": 45,
       "category": "men",
-      "image": "https://via.placeholder.com/150?text=Mens+Sporty"
+      "image": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=300&h=300&fit=crop"
     },
     {
       "id": 3,
       "name": "Men's Evening Elegance",
       "price": 60,
       "category": "men",
-      "image": "https://via.placeholder.com/150?text=Mens+Evening"
+      "image": "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=300&h=300&fit=crop"
     },
     {
       "id": 4,
       "name": "Men's Fresh Breeze",
       "price": 40,
       "category": "men",
-      "image": "https://via.placeholder.com/150?text=Mens+Fresh"
+      "image": "https://images.unsplash.com/photo-1588405748880-12d1d2a59db9?w=300&h=300&fit=crop"
     },
     {
       "id": 5,
       "name": "Men's Woody Essence",
       "price": 55,
       "category": "men",
-      "image": "https://via.placeholder.com/150?text=Mens+Woody"
+      "image": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=300&h=300&fit=crop"
     },
     {
       "id": 6,
       "name": "Women's Floral Bouquet",
       "price": 65,
       "category": "women",
-      "image": "https://via.placeholder.com/150?text=Womens+Floral"
+      "image": "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=300&h=300&fit=crop"
     },
     {
       "id": 7,
       "name": "Women's Sweet Vanilla",
       "price": 50,
       "category": "women",
-      "image": "https://via.placeholder.com/150?text=Womens+Vanilla"
+      "image": "https://images.unsplash.com/photo-1588405748880-12d1d2a59db9?w=300&h=300&fit=crop"
     },
     {
       "id": 8,
       "name": "Women's Citrus Zest",
       "price": 45,
       "category": "women",
-      "image": "https://via.placeholder.com/150?text=Womens+Citrus"
+      "image": "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=300&h=300&fit=crop"
     },
     {
       "id": 9,
       "name": "Women's Romantic Rose",
       "price": 70,
       "category": "women",
-      "image": "https://via.placeholder.com/150?text=Womens+Rose"
+      "image": "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=300&h=300&fit=crop"
     },
     {
       "id": 10,
       "name": "Women's Exotic Jasmine",
       "price": 55,
       "category": "women",
-      "image": "https://via.placeholder.com/150?text=Womens+Jasmine"
+      "image": "https://images.unsplash.com/photo-1588405748880-12d1d2a59db9?w=300&h=300&fit=crop"
     }
   ]
 }

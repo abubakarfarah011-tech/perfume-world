@@ -4,6 +4,7 @@ import './Cart.css';
  * blk 1:COMPONENT DEFINITION & PROPS
  */
 const Cart = ({ isOpen, onClose, cartItems, onRemove }) => {
+   const [checkedOut, setCheckedOut] = React.useState(false);
 /**
    * blk 2: CONDITIONAL RENDERING
    */
@@ -43,9 +44,24 @@ const Cart = ({ isOpen, onClose, cartItems, onRemove }) => {
           )}
         </div>
 
-        <div className="cart-footer">
-            <h3>Total: {total} KES</h3>
-            <button className="checkout-btn">Checkout</button>
+     <div className="cart-footer">
+          {!checkedOut ? (
+            <>
+              <h3>Total: {total} KES</h3>
+              <button
+                className="checkout-btn"
+                onClick={() => setCheckedOut(true)}
+              >
+                Checkout
+              </button>
+            </>
+          ) : (
+            <>
+              <h3>Total: {total} KES</h3>
+              <p>Paybill: 800800</p>
+              <p>Acc: Your Name</p>
+            </>
+          )}
         </div>
       </div>
     </div>

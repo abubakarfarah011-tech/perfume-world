@@ -1,0 +1,74 @@
+{
+  "perfumes": [
+    {
+      "id": 1,
+      "name": "Men's Classic Cologne",
+      "price": 50,
+      "category": "men",
+      "image": "https://via.placeholder.com/150?text=Mens+Classic"
+    },
+    {
+      "id": 2,
+      "name": "Men's Sporty Scent",
+      "price": 45,
+      "category": "men",
+      "image": "https://via.placeholder.com/150?text=Mens+Sporty"
+    },
+    {
+      "id": 3,
+      "name": "Men's Evening Elegance",
+      "price": 60,
+      "category": "men",
+      "image": "https://via.placeholder.com/150?text=Mens+Evening"
+    },
+    {
+      "id": 4,
+      "name": "Men's Fresh Breeze",
+      "price": 40,
+      "category": "men",
+      "image": "https://via.placeholder.com/150?text=Mens+Fresh"
+    },
+    {
+      "id": 5,
+      "name": "Men's Woody Essence",
+      "price": 55,
+      "category": "men",
+      "image": "https://via.placeholder.com/150?text=Mens+Woody"
+    },
+    {
+      "id": 6,
+      "name": "Women's Floral Bouquet",
+      "price": 65,
+      "category": "women",
+      "image": "https://via.placeholder.com/150?text=Womens+Floral"
+    },
+    {
+      "id": 7,
+      "name": "Women's Sweet Vanilla",
+      "price": 50,
+      "category": "women",
+      "image": "https://via.placeholder.com/150?text=Womens+Vanilla"
+    },
+    {
+      "id": 8,
+      "name": "Women's Citrus Zest",
+      "price": 45,
+      "category": "women",
+      "image": "https://via.placeholder.com/150?text=Womens+Citrus"
+    },
+    {
+      "id": 9,
+      "name": "Women's Romantic Rose",
+      "price": 70,
+      "category": "women",
+      "image": "https://via.placeholder.com/150?text=Womens+Rose"
+    },
+    {
+      "id": 10,
+      "name": "Women's Exotic Jasmine",
+      "price": 55,
+      "category": "women",
+      "image": "https://via.placeholder.com/150?text=Womens+Jasmine"
+    }
+  ]
+}

@@ -101,7 +101,7 @@ export default function Header({
             <span className="cart-badge">{cartCount}</span>
           )}
         </div>
-        
+
           {/* Theme toggle
              switch that communicates with the global toggleDarkMode function. */}
         <div className="theme-switch-wrapper">

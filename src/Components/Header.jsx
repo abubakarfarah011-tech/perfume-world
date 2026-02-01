@@ -1,5 +1,7 @@
+// src/Components/Header/Header.jsx
 import React, { useState } from 'react';
-import './Header.css'; 
+import { Link } from 'react-router-dom';  // Add this import for routing
+import './Header.css';
 
 // --- SVG Icons ---
 const CartIcon = () => (
@@ -11,7 +13,7 @@ const CartIcon = () => (
 );
 
 const LogoIcon = () => (
-<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
     {/* Diamond Cap */}
     <path d="M12 2L15 4L12 6L9 4L12 2Z" fill="currentColor" /> 
     <path d="M9 4L12 6M12 6L15 4" stroke="white" strokeWidth="0.5" /> {/* lines in cap */}
@@ -79,8 +81,8 @@ export default function Header({
           </div>
         </div>
 
-        {/* About Link */}
-        <a href="#about-section" className="nav-link">About</a>
+        {/* About Link - Updated to use Link */}
+        <Link to="/about" className="nav-link">About</Link>
 
         {/* Cart Counter */}
         <div className="cart-container" onClick={onOpenCart}>

@@ -1,19 +1,227 @@
+/* App.css or index.css */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: 'Arial', sans-serif; /* Elegant font; replace with Google Fonts if needed */
 }
 
+/* Overall App Container */
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f9f9f9; /* Light background for elegance */
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styles */
+.app-container.dark-mode {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0;            /* Light text */
+}
+
+/* Header Styles (for Dev B's Header) */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header.dark-mode {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+header.dark-mode h1 {
+  color: #e0e0e0;
+}
+
+header button {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+header button:hover {
+  background-color: #0056b3;
+}
+
+header input {
+  padding: 0.5rem;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Product Grid (for your ProductList) */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid: 3-4 cards per row */
+  gap: 2rem; /* Space between cards */
+  padding: 2rem;
+  justify-items: center;
+}
+
+/* Product Card (for your ProductCard) */
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  max-width: 250px;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card.dark-mode {
+  background-color: #333;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.product-card.dark-mode h3 {
+  color: #e0e0e0;
+}
+
+.product-card p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.product-card.dark-mode p {
+  color: #ccc;
+}
+
+.add-to-cart-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #218838;
+}
+
+/* Footer Styles (for Dev D's Footer) */
+footer {
+  padding: 2rem;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer.dark-mode {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+footer h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+footer a {
+  margin: 0 1rem;
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* 2 cards per row on mobile */
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header input {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+  }
+
+  .product-card {
+    max-width: 100%;
+  }
+}
+
+/* Legacy styles (keep if needed) */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -39,17 +247,4 @@
 
 .read-the-docs {
   color: #888;
-}
-
-/* Styles for when Dark Mode is active */
-.app-container.dark-mode {
-  background-color: #121212; /* Dark background */
-  color: #e0e0e0;            /* Light text */
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* app takes full height so the dark background covers everything */
-.app-container {
-  min-height: 100vh;
-  width: 100%;
 }

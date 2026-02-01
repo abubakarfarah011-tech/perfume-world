@@ -1,19 +1,21 @@
-// src/App.js
-import { useState, useEffect } from 'react';
-import ProductList from './Components/ProductList';
-import Footer from './Components/Footer/Footer';
-// import About from './Components/About/About';
-import Header from './Components/Header';
+import { useState, useEffect } from 'react'
+import Header from './Components/Header'
+import ProductList from './Components/ProductList'
+import Footer from "./Components/Footer/Footer";
+import About from './Components/About/About'
+import './App.css' 
 
 function App() {
-  // 1. GLOBAL STATE: Managing the "Memory" of the app
+// 1. GLOBAL STATE: Managing the "Memory" of the app
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-  // New: State for filtering (Men/Women) and searching
-  const [filter, setFilter] = useState('all'); // 'all', 'men', 'women'
-  const [searchTerm, setSearchTerm] = useState(''); // String for search by name
+  
+  // #State for Filtering and Dark Mode
+  const [filterCategory, setFilterCategory] = useState("All");
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false); // to open cart sidebar
 
-  // 2. FETCH DATA: Getting perfume data from the API (products.json)
+// 2. FETCH DATA: Getting perfume data from the API (products.json)
   useEffect(() => {
   fetch('products.json')
     .then((res) => res.json())
@@ -33,28 +35,44 @@ function App() {
     setCart([...cart, item]);
   };
 
-  // New: Filter and search logic
-  // First, filter by category (Men/Women), then by search term (name)
-  const filteredPerfumes = products
-    .filter(perfume => filter === 'all' || perfume.category === filter) // Category filter
-    .filter(perfume => perfume.name.toLowerCase().includes(searchTerm.toLowerCase())); // Search filter
+  // #Logic for Toggling Dark Mode
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+  };
 
-  // 4. ARCHITECTURE: Passing the data/logic to the other Developers
+  // #Logic to handle Filter Change
+  const handleFilterChange = (category) => {
+    setFilterCategory(category);
+  };
+
+  // #Logic to filter the products before sending them to ProductList
+  const displayedProducts = filterCategory === "All" 
+    ? products 
+    : products.filter(product => product.category === filterCategory); 
+
   return (
-    <div className="app-container">
-      {/* Dev B gets the cart number, and now setFilter/setSearchTerm for controls */}
+    //#add the darkmode class to the main container based on state
+    <div className={`app-container ${isDarkMode ? 'dark-mode' : ''}`}>
+      
+      {/* #pass all the control functions to Header */}
       <Header 
         cartCount={cart.length} 
-        setFilter={setFilter} 
-        setSearchTerm={setSearchTerm} 
+        onFilterChange={handleFilterChange}
+        toggleDarkMode={toggleDarkMode}
+        isDarkMode={isDarkMode}
+        onOpenCart={() => setIsCartOpen(!isCartOpen)} //simulating openingcart
       />
 
-      {/* Dev C gets the filtered perfume list and the 'Add' function */}
-      <ProductList perfumes={filteredPerfumes} onAdd={addToCart} />
+      {/* #Dev C: Gets the FILTERED perfume list*/}
+      <ProductList perfumes={displayedProducts} onAdd={addToCart} />
 
       {/* Dev D builds the footer here */}
       <Footer />
-      {/* <About /> */}
+      
+      {/* ID for the About Us link to scroll to */}
+      <div id="about-section">
+        <About/>
+      </div>
     </div>
   );
 }

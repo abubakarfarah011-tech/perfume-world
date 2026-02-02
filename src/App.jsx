@@ -79,15 +79,14 @@ function App() {
     <ProductList products={displayedProducts} addToCart={addToCart} />
 
       {/* Dev D builds the footer here */}
-      <Footer />
-      <About/>
-      
-      {/* ID for the About Us link to scroll to */}
-      <div id="about-section">
-        <About/>
-      </div>
-    </div>
-  );
+     <Footer />
+
+
+<div id="about-section">
+  <About />
+</div>
+</div>
+);
 }
 
 export default App;
